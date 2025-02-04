@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Payment</title>
+    <style>
+        body {
+            background-color:#f9f2ec;
+            color: #64470c;
+            font-family: Arial, sans-serif;
+        }
+
+        h2 {
+            color: #64470c;
+            font-size: 80px;
+        }
+
+        form {
+            background-color: #faf9f6;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+            width: 50%;
+            margin: auto; /*center automatically*/
+            margin-top: 15px;
+            margin-bottom: 30px; /*distance from bottom*/
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: none;
+            border-bottom: 1px solid #64470c; /*the line you input on*/
+            background-color: transparent;
+            outline: none;
+        }
+
+        .payment-method {
+            display: flex;
+            align-items: center;
+            margin-bottom: 7px; /*distance from circle*/
+        }
+
+        input[type="radio"] {
+            margin-right: 15px;
+        }
+
+        button {
+            background-color: #D2B48C ;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+        button a {
+            text-decoration: none; /* remove underlining from the text inside the button */
+            color: #64470c; /* beige text color */
+        }
+        button:hover {
+            background-color: #64470c;
+
+        }
+        button a:hover{
+            color: #d2b48c; 
+        }
+        
+        header
+        {
+            font-family:'Jost',sans-serif;
+            position: fixed;
+            width:100%;
+            top: 0;
+            right: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: white;
+        }
+        .navmenu
+            {
+                list-style-type: none; /* remove list item bullets */
+                display: flex;
+                align-items: center; /* center items vertically */
+                padding-right: 35%; /* add padding to the right side */
+
+            }
+            .navmenu img {
+                margin: auto;
+                height: 20vh;
+                width: 100%;
+                display: flex;
+                align-items: center;
+            }
+            .navmenu a
+            {
+                color: #5A5A5A;
+                font-size: 16px;
+                text-transform: capitalize;
+                padding: 10px 20px;
+                font-weight:400;
+                transition: all .42s ease;
+                text-decoration: none; /* remove underlines from links */
+            }
+
+            .navmenu a:hover
+            {
+                color: #D2B48C;
+            }
+            
+            body {
+                margin-top: 125px; /* top margin to accommodate the header */
+            }
+            footer
+            {
+                background-color:#faf9f6;
+            }
+            .footercon
+            {
+                width: 100%;
+                padding: 70px 30px 20px;
+            }
+            .footernav
+            {
+                margin: 30px 0;
+            }
+            .footernav ul
+            {
+                list-style-type: none; /* remove list item bullets */
+                display: flex;
+                justify-content: center;
+                text-decoration: none;
+
+            }
+            .footernav ul li a
+            {
+                color: #5A5A5A;
+                margin: 20px;
+                text-decoration: none;
+                font-size: 1.3em;
+                opacity: 1;
+                transition: 0.5s;
+            }
+            .footernav ul li a:hover
+            {
+                opacity: 0.5;
+            }
+            .footerbot
+            {
+                background-color:white ;
+                padding: 20px;
+                text-align: center;
+            }
+            .footerbot p
+            {
+                color: #5A5A5A;
+            }
+
+    </style>
+</head>
+
+<body>
+    <header>  
+        <img src="../images\IMG_6891.jpg">
+            <ul class="navmenu">
+                <li><a href="../html/homepage.html">Home</a></li>
+                <li><a href="../html/functionality.html">Products</a></li>
+                <li><a href="../html/payment.html">Checkout</a></li>
+                <li><a href="../html/categories.html">Categories</a></li>
+            </ul>
+</header>
+<br>
+<h2 align="center">Payment</h2> <!--heading -->
+
+<form>
+    <!--creating a form-->
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="contact_number">Contact number:</label>
+    <input type="number" id="contact_number" name="contact_number" required>
+
+    <label for="email">Email:</label>
+    <input type="text" id="email" name="email" required>
+
+    <label for="shipping_address">Shipping Address:</label>
+    <input type="text" id="shipping_address" name="shipping_address" required>
+
+    <label>Payment Method:</label>
+    <!-- choose radio input type so only one option can be selected-->
+    <div class="payment-method">
+        <input type="radio" id="cash" name="payment_method" value="Cash on Delivery" required>
+        <label for="cash">Cash on Delivery</label>
+    </div>
+    <div class="payment-method">
+        <input type="radio" id="visa" name="payment_method" value="Visa Card" required>
+        <label for="visa">Visa Card</label>
+    </div>
+    <div class="payment-method">
+        <input type="radio" id="debit" name="payment_method" value="Debit Card" required>
+        <label for="debit">Debit Card</label>
+    </div>
+    <!--this button takes user back to homepage-->
+    <button><a href="../html/homepage.html">Place an Order</a></button>
+</form>
+<!--adding a footer-->
+    <footer>
+       <div class="footercon">
+            <div class="footernav">
+                  <ul>
+                       <li><a href="">Contact</a></li>
+                       <li><a href="">Privacy Policy</a></li>
+                       <li><a href="">Terms of Service</a></li>
+                       <li><a href="">Returns & FAQ</a></li>
+                  </ul>                   
+             </div>
+        </div>
+         <div class="footerbot">
+              <p>EMAIL: Customercare@Haya.com | PHONE: 0817 82901</p>
+             </div>
+       </footer>
+
+</body>
+</html>
