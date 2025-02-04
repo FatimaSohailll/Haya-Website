@@ -1,0 +1,202 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  list-style: none;
+  text-decoration: none;
+}
+section {
+  padding: 5% 10%;
+}
+h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 60px;
+  text-align: center;
+  color: #4b371c;
+}
+h3 {
+  font-family: "Goudy Bookletter 1911", serif;
+  font-size: 50px;
+  text-align: center;
+  color: #4b371c;
+}
+body {
+  margin: 50px;
+  font-family: "Goudy Bookletter 1911", serif;
+  background-color: #f9f2ec;
+  background-size: contain;
+}
+section {
+  padding: 5% 10%;
+}
+/* container to make all its items centered */
+.centered-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 10%;
+  background-color: white;
+}
+.navmenu {
+  display: flex;
+}
+.navmenu a {
+  color: #5a5a5a;
+  font-size: 16px;
+  text-transform: capitalize;
+  padding: 10px 20px;
+  font-weight: 400;
+  transition: all 0.42s ease;
+}
+.navmenu a:hover {
+  color: #d2b48c;
+}
+
+button {
+  text-align: center;
+  transition-duration: 0.4s; /* hover over the button */
+  background-color: #d2b48c;
+  color: #64470c;
+  border: none;
+  border-radius: 8px; /* round the borders */
+  display: inline-block; /* make the button a block element for spacing */
+  margin-bottom: 3px;
+  margin-top: 3px; /* spacing between images and buttons */
+  padding: 5px 2px;
+}
+
+button a {
+  text-decoration: none; /* remove underlining from the text inside the button */
+  color: inherit; /* same text color as parent */
+}
+button:hover {
+  background-color: #64470c;
+  color: #d2b48c;
+}
+
+.item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.item div {
+  flex-basis: 30%; /* Adjust the width of each item */
+  margin-bottom: 20px;
+}
+
+.item img {
+  margin-top: 10px;
+  width: 100%;
+  border-radius: 8px;
+  border: 5px solid #988558;
+}
+
+/*the buttons at the end style*/
+.bottom-buttons {
+  margin-top: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.bottom-buttons button a {
+  text-decoration: none;
+  color: #64470c;
+}
+
+.bottom-buttons button a:hover {
+  background-color: #e9d189;
+  color: #64470c;
+}
+button2 {
+  text-align: center;
+  transition-duration: 0.4s;
+  background-color: #d2b48c;
+  color: #64470c;
+  border: none;
+  padding: 10px 15px; /* increase padding to make the buttons bigger */
+  border-radius: 8px; /* round */
+  margin: 5px; /* add some margin between buttons */
+}
+
+button2 a {
+  text-decoration: none;
+  color: inherit;
+}
+button2:hover {
+  background-color: #64470c;
+  color: #d2b48c;
+}
+footer {
+  /*  text-decoration: none;*/
+  background-color: #faf9f6;
+}
+.footercon {
+  width: 100%;
+  padding: 70px 30px 20px;
+}
+.footernav {
+  margin: 30px 0;
+}
+.footernav ul {
+  list-style-type: none; /* remove list item bullets */
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+}
+.footernav ul li a {
+  color: #5a5a5a;
+  margin: 20px;
+  text-decoration: none;
+  font-size: 1.3em;
+  opacity: 1;
+  transition: 0.5s;
+}
+.footernav ul li a:hover {
+  opacity: 0.5;
+}
+.footerbot {
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+}
+.footerbot p {
+  color: #5a5a5a;
+}
+
+buttonstat {
+  padding: 10px;
+  background-color: white;
+  color: white;
+  border: 1px solid #e9d788; /* beige */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px; /* rounded look */
+  position: fixed; /* set the position to fixed = static*/
+  top: 150px; /* set the distance from the top */
+  right: 10px; /* set the distance from the right */
+  width: 50px;
+  height: 50px;
+}
+buttonstat a {
+  text-decoration: none;
+  color: #ffffff; /*white*/
+}
+buttonstat img {
+  align-self: center;
+  margin-top: 2px;
+  max-width: 100%;
+  height: 40px;
+}
