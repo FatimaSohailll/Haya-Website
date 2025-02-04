@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Jost", sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+body {
+  background-color: #faf9f6;
+}
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center; /*align the items in the header*/
+  justify-content: space-between; /*equally spaced*/
+  padding: 20px 10%; /*add padding for the logo*/
+  background-color: white;
+}
+
+.navmenu {
+  display: flex;
+}
+.navmenu a {
+  color: #5a5a5a;
+  font-size: 16px;
+  text-transform: capitalise;
+  padding: 10px 20px;
+  font-weight: 400;
+  transition: all 0.42s ease; /*transition upon hovering*/
+}
+.navmenu a:hover {
+  color: #d2b48c; /*change text color to beige upon hover*/
+}
+.navmenu img {
+  /*add the logo to the header*/
+  margin: auto;
+  height: 20vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+section {
+  padding: 30% 10%;
+  background-color: #f9f2ec;
+}
+.main-home {
+  width: 100%;
+  height: 100vh;
+  background-color: #f9f2ec;
+  display: flex;
+  justify-content: space-between;
+  background-position: right;
+  background-size: cover;
+  align-items: center;
+}
+.main-image img {
+  margin-left: 60px;
+  background-position: right;
+  width: 90%;
+  height: 50%;
+  border-radius: 50% 50% 50% 50%;
+  border: 5px solid #988558;
+  box-shadow: 0 0 40px #b77b82;
+}
+
+.main-text h1 {
+  color: #64470c;
+  font-size: 90px;
+  text-transform: capitalize;
+  font-weight: 600;
+  font-family: "Playfair Display", serif;
+  margin: 6px 0 10px;
+}
+.main-text p {
+  color: #b77b82;
+  font-size: 30px;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+.main-btn {
+  display: inline-block;
+  color: #4b371c;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: capitalize;
+  border: 2px solid #4b371c;
+  padding: 12px 25px;
+  transition: all 0.42s ease;
+}
+.main-btn:hover {
+  background-color: #4b371c;
+  color: #d2b48c;
+}
+.container {
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 20vh;
+  margin-top: 40px;
+}
+hr {
+  border: 1.5px solid #d2b48c;
+}
+.banner {
+  background-color: #b77b82; /*make the banner color mauve so that it is eye catching*/
+  color: #4b371c;
+  padding: 20px;
+  text-align: center;
+  font-style: Chalkduster, fantasy;
+  width: 100%;
+}
+
+.image-container {
+  margin-top: 5%;
+  margin-right: 10%;
+  display: flex;
+  justify-content: space-between;
+}
+.image-container img {
+  width: 30%;
+  margin-right: 60px;
+  margin-left: 30px;
+  height: auto;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border: 8px solid #988558;
+}
+.image-container img:hover {
+  /*upon hovering, the image increases in size*/
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+  box-shadow: 0 0 20px #b77b82; /*add a shadow upon hover*/
+}
+.intro p {
+  text-align: center;
+  margin-top: 60px;
+  margin-left: 60px;
+  margin-right: 60px;
+  height: 200px;
+  font-size: 20px;
+  color: #988558;
+}
+footer {
+  background-color: #faf9f6;
+}
+.footercon {
+  width: 100%;
+  padding: 70px 30px 20px;
+}
+.footernav {
+  margin: 30px 0;
+}
+.footernav ul {
+  display: flex;
+  justify-content: center;
+}
+.footernav ul li a {
+  color: #5a5a5a;
+  margin: 20px;
+  text-decoration: none;
+  font-size: 1.3em;
+  opacity: 1;
+  transition: 0.5s;
+}
+.footernav ul li a:hover {
+  opacity: 0.5;
+}
+.footerbot {
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+}
+.footerbot p {
+  color: #5a5a5a;
+}

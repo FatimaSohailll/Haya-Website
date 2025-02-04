@@ -1,0 +1,180 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f2ec;
+}
+
+hr {
+  color: #5a5a5a;
+  opacity: 0.2;
+}
+
+.cart-container {
+  width: 50%; /*take up half the page*/
+  margin: auto; /*align automatically*/
+  margin-top: 160px; /*add distance from the header*/
+  margin-bottom: 30px;
+  background-color: #faf9f6;
+  border-radius: 20px; /*round the borders*/
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1); /*add a slight shadow*/
+  padding: 20px;
+}
+
+h2 {
+  text-align: center;
+  color: #64470c;
+  font-size: 65px;
+  font-family: "Playfair Display", serif;
+}
+
+h3 {
+  font-family: Garamond, "Times New Roman", Times, serif;
+  font-size: 20px;
+  color: #64470c;
+}
+
+p {
+  font-family: Garamond, "Times New Roman", Times, serif;
+  font-size: 17px;
+  color: #64470c;
+}
+
+button {
+  text-align: center;
+  transition-duration: 0.4s; /* hover over the button */
+  background-color: #f9f2ec;
+  color: #64470c;
+  border-radius: 8px; /* round the borders */
+  border: 1px solid #64470c;
+  outline: none; /* remove default outline */
+}
+
+button:hover {
+  color: #f9f2ec;
+  background-color: #64470c;
+}
+
+.product {
+  border-bottom: 1px solid #ddd; /*add a line to seperate*/
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+.product img {
+  max-width: 100px;
+  margin-right: 20px;
+}
+
+.product-details {
+  flex-grow: 1;
+}
+
+/* the buttons at the end style */
+.bottom-buttons {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.button2 {
+  text-align: center;
+  transition-duration: 0.4s;
+  background: #64470c;
+  border: 2px solid #64470c;
+  border-radius: 8px; /* round */
+  margin: 5px; /* add some margin between buttons */
+  display: inline-block; /* make buttons inline-block to allow margin */
+}
+
+button2 a {
+  text-decoration: none;
+  color: #d2b48c;
+}
+
+.button2:hover {
+  background-color: #d2b48c; /* beige bg */
+  border: 2px solid #d2b48c;
+  color: #64470c;
+}
+button2 a:hover {
+  color: #64470c;
+}
+#total-price {
+  text-align: right;
+  margin-top: 20px;
+  font-size: 18px;
+}
+header {
+  font-family: "Jost", sans-serif;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  padding: 20px 10%;
+  background-color: white;
+}
+.navmenu {
+  list-style-type: none; /* remove list item bullets */
+  display: flex;
+  align-items: center; /* center items vertically */
+  text-align: center;
+  padding-left: 20%; /*fixed padding to help center*/
+}
+.navmenu a {
+  color: #5a5a5a;
+  font-size: 16px;
+  text-transform: capitalize;
+  padding: 10px 20px;
+  font-weight: 400;
+  transition: all 0.42s ease;
+  text-decoration: none; /* remove underlines from links */
+}
+
+.navmenu a:hover {
+  color: #d2b48c;
+}
+
+body {
+  margin-top: 105px; /* top margin to accommodate the header */
+}
+footer {
+  background-color: #faf9f6;
+}
+.footercon {
+  width: 100%;
+  padding: 70px 30px 20px;
+}
+.footernav {
+  margin: 30px 0;
+}
+.footernav ul {
+  list-style-type: none; /* remove list item bullets */
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+}
+.footernav ul li a {
+  color: #5a5a5a;
+  margin: 20px;
+  text-decoration: none;
+  font-size: 1.3em;
+  opacity: 1;
+  transition: 0.5s;
+}
+.footernav ul li a:hover {
+  opacity: 0.5;
+}
+.footerbot {
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+}
+.footerbot p {
+  color: #5a5a5a;
+}
