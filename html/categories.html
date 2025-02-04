@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--linking the fonts from google-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap">
+    <style>
+        body
+        {
+            background-color:  #f9f2ec;
+        }
+        h2 {
+            text-align: center;
+            color: #64470c;
+            font-size: 80px;
+            font-family: 'Playfair Display', serif;
+        }
+        section {
+         padding: 2% 10%;
+}
+        .category {
+            background-color: #4b371c; 
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+            position: relative; /* position:relative for button positioning */
+            display: flex; /* Added display: flex for side-by-side layout */
+            align-items: center; /* Center content vertically */
+        }
+        .category:hover
+        {
+            transform: scale(1.1);
+            transition: transform 0.3s ease;
+            box-shadow: 0 0 20px #988558;
+        }
+        .category h3 {
+            color: #faf9f6;
+        }
+
+        .category img {
+            max-width: 100%;
+            height: 200px; /* set a fixed height for all images */
+            border-radius: 10px;
+            margin-right: 20px; /* add some space between image and text */
+        }
+
+        .category p {
+            color: #faf9f6;
+            flex: 1; /* allow text to take remaining space */
+        }
+        
+  		  buttonstat {
+            padding: 10px;
+            background-color: white;
+            color: white;
+            border: 1px solid #e9d788; /* beige */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px; /* rounded look */
+            position: fixed; /* set the position to fixed = static*/
+            top: 150px; /* set the distance from the top */
+            right: 10px; /* set the distance from the right */
+            width: 30px;
+            height: 20px;
+          }
+          buttonstat a {
+            text-decoration: none;
+            color: #ffffff; /*white*/
+          }
+          buttonstat img {
+            max-width: 100%;
+            height: 40px;
+          }
+          
+        .shop-now-button {
+            background-color: #4b371c;
+            color: #faf9f6;
+            border: 2px solid #faf9f6;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            position: absolute;
+            right: 20px; /* distance from the right */
+            bottom: 10px; /* distance from the bottom */
+            transition-duration: 0.4s;
+        }
+
+        .shop-now-button a {
+            text-decoration: none;
+            color: #faf9f6;
+        }
+
+        .shop-now-button:hover {
+            background-color: #faf9f6;
+            border: 2px solid #faf9f6;
+        }
+        .shop-now-button a:hover {
+            color: #4b371c;
+        }
+        .bottom-buttons {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .bottom-buttons button {
+            background-color: #4b371c;
+            border: 2px solid #4b371c;
+            border-radius: 8px;
+            margin: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #faf9f6;
+            cursor: pointer;
+            transition-duration: 0.4s;
+        }
+
+        .bottom-buttons button a {
+            text-decoration: none;
+            color: floralwhite;
+        }
+
+        .bottom-buttons button:hover {
+            background-color: #988558;
+            border: 2px solid #4b371c;
+            color: #4b371c;
+        }
+        .bottom-buttons button a:hover {
+            color: #4b371c;
+        } 
+        header
+        {
+            font-family:'Jost',sans-serif;
+            position: fixed;
+            width:100%;
+            top: 0;
+            right: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: white;
+        }
+        .navmenu
+            {
+                list-style-type: none; /* remove list item bullets */
+                display: flex;
+                align-items: center; /* center items vertically */
+                padding-right: 35%; /* add padding to the right side */
+
+            }
+            .navmenu img {
+                margin: auto;
+                height: 20vh;
+                width: 100%;
+                display: flex;
+                align-items: center;
+            }
+            .navmenu a
+            {
+                color: #5A5A5A;
+                font-size: 16px;
+                text-transform: capitalize;
+                padding: 10px 20px;
+                font-weight:400;
+                transition: all .42s ease;
+                text-decoration: none; /* remove underlines from links */
+            }
+
+            .navmenu a:hover
+            {
+                color: #D2B48C;
+            }
+            body {
+                margin-top: 110px; /* top margin to accommodate the header */
+            }
+            footer
+            {
+                /*  text-decoration: none;*/
+                background-color:#faf9f6;
+            }
+            .footercon
+            {
+                width: 100%;
+                padding: 70px 30px 20px;
+            }
+            .footernav
+            {
+                margin: 30px 0;
+            }
+            .footernav ul
+            {
+                list-style-type: none; /* remove list item bullets */
+                display: flex;
+                justify-content: center;
+                text-decoration: none;
+
+            }
+            .footernav ul li a
+            {
+                color: #5A5A5A;
+                margin: 20px;
+                text-decoration: none;
+                font-size: 1.3em;
+                opacity: 1;
+                transition: 0.5s;
+            }
+            .footernav ul li a:hover
+            {
+                opacity: 0.5;
+            }
+            .footerbot
+            {
+                background-color: white ;
+                padding: 20px;
+                text-align: center;
+            }
+            .footerbot p
+            {
+                color: #5A5A5A;
+            }
+
+    </style>
+    <title>Categories</title>
+</head>
+<body>
+    <header>  
+        <!--adding the logo and the navigation bvar in the header-->
+        <img src="../images\IMG_6891.jpg">
+            <ul class="navmenu">
+                <li><a href="../html/homepage.html">Home</a></li>
+                <li><a href="../html/functionality.html">Products</a></li>
+                <li><a href="../html/payment.html">Checkout</a></li>
+                <li><a href="../html/categories.html">Categories</a></li>
+            </ul>
+</header>
+<section>
+    <h2>Categories</h2>
+
+<!-- the categories of the products -->
+<div class="category">
+    <img src="https://i.pinimg.com/564x/23/56/f3/2356f3cb6df546d509d04fa24f4ba0c8.jpg" alt="Plain Abaya Image" />
+    <div>
+    
+        <!--adding heading, description, image, and a shop now button for abaya category-->
+      <h3>Plain Abaya</h3>
+    <p>
+        Our silky and comfortable plain abayas come in a variety of sizes and
+        block colours. Treat yourself today and get one.
+    </p>
+    </div>
+    <button class="shop-now-button"><a href="../html/functionality.html">Shop Now</a></button>
+</div>
+
+<div class="category">
+    <!--adding image in the jilbab category-->
+    <img src="https://i.pinimg.com/564x/2f/01/7c/2f017c75798c8035c909e6c38c5ae15d.jpg" alt="Jilbab Image" />
+    <div>
+        <h3>Jilbab</h3>
+        <p>
+            <!--adding description-->
+            Our comfortable yet stylish jilbabs are all you need this season. Cover
+            yourself in modesty and ease.
+        </p>
+    </div>
+    <button class="shop-now-button"><a href="../html/functionality.html">Shop Now</a></button>
+</div>
+
+<div class="category">
+    <img src="https://i.pinimg.com/564x/66/1a/9d/661a9de1634071b1d57e556e8373b435.jpg" alt="Hijab Image" />
+    <div>
+        <h3>Hijab</h3>
+        <p>
+            Explore our stunning range of hijabs, ranging from block-coloured and
+            elegant to patterned and gorgeous pieces, that can withstand any wear
+            and tear.
+        </p>
+    </div>
+    <!--adding a shop now button for the hijabs-->
+    <button class="shop-now-button"><a href="../html/functionality.html">Shop Now</a></button>
+</div>
+</section>
+<!-- static add to cart button -->
+<buttonstat>
+    <a href="../html/cart.html">
+        <img src="../images/cart.jpeg" alt="Add to Cart"/>
+    </a>
+</buttonstat>
+<!--adding a button to go to the products page-->
+<div class="bottom-buttons">
+    <button>
+        <a href="../html/functionality.html">Functionality: See our Products</a>
+    </button>
+</div>
+<br>
+<footer>
+    <!--adding a footer-->
+    <div class="footercon">
+         <div class="footernav">
+               <ul>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="">Privacy Policy</a></li>
+                    <li><a href="">Terms of Service</a></li>
+                    <li><a href="">Returns & FAQ</a></li>
+               </ul>                   
+          </div>
+     </div>
+      <div class="footerbot">
+           <p>EMAIL: Customercare@Haya.com | PHONE: 0817 82901</p>
+          </div>
+    </footer>
+</body>
+</html>

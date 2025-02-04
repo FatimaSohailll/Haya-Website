@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Cart</title>
+  <link rel="stylesheet" href="../css/cartstyles.css">  <!--linking the stylesheet-->
+</head>
+<body> 
+    <header>  
+        <img src="../images\IMG_6891.jpg"> <!--adding logo-->
+            <ul class="navmenu"> <!--adding navigation bar-->
+                <li><a href="../html/homepage.html">Home</a></li>
+                <li><a href="../html/functionality.html">Products</a></li>
+                <li><a href="../html/payment.html">Checkout</a></li>
+                <li><a href="../html/categories.html">Categories</a></li>
+            </ul>
+</header>
+<div class="cart-container">
+<!-- add the products inside the container -->
+    <h2>Cart</h2> 
+    <hr> 
+    <div class="product" id="product1">
+        <img src="https://i.pinimg.com/564x/7a/55/12/7a55123ffe554b3bbc61216839c62dda.jpg" alt="Product 1">
+        <div class="product-details">
+            <h3>Sapphire Blue Abaya</h3>
+            <p>Price: Rs. 7,000</p>
+            <!--calling functions to perform the required operation-->
+            <p>Quantity: <span id="quantity1">1</span></p>
+            <button onclick="increaseQuantity('quantity1')">+</button>
+            <button onclick="decreaseQuantity('quantity1')">-</button>
+            <button onclick="removeProduct('product1')">Remove</button>
+        </div>
+    </div>
+
+    <!--adding a nother product in the cart -->
+    <div class="product" id="product2">
+        <img src="https://i.pinimg.com/564x/a1/cb/30/a1cb30391229af757f9a18459fa1a5a3.jpg" alt="Product 2">
+        <div class="product-details">
+            <h3>Tea Green Jilbab</h3>
+            <p>Price: Rs. 7,000</p>
+            <p>Quantity: <span id="quantity2">1</span></p>
+            <button onclick="increaseQuantity('quantity2')">+</button>
+            <button onclick="decreaseQuantity('quantity2')">-</button>
+            <button onclick="removeProduct('product2')">Remove</button>
+        </div>
+    </div>
+
+    <div class="product" id="product3">
+        <img src="https://i.pinimg.com/564x/d1/ac/74/d1ac742975a4a01f313c584501a1a3b3.jpg" alt="Product 3">
+        <div class="product-details">
+            <h3>Viridian Green Hijab</h3>
+            <p>Price: Rs. 7,000</p>
+            <p>Quantity: <span id="quantity3">1</span></p>
+            <button onclick="increaseQuantity('quantity3')">+</button>
+            <button onclick="decreaseQuantity('quantity3')">-</button>
+            <button onclick="removeProduct('product3')">Remove</button>
+        </div>
+    </div>
+
+    <div id="total-price"></div> <!--to show the total price-->
+
+    <!-- buttons for navigation -->
+    <div class="bottom-buttons">
+        <!-- this takes the user to payment page-->
+        <div class="button2">
+            <button2><a href="../html/payment.html">Proceed to Checkout</a></button2>
+        </div>
+        <div class="button2">
+        <!--takes the user to categories page-->
+            <button2><a href="../html/categories.html">Continue Shopping</a></button2>
+        </div>
+    </div>
+</div>
+</body>
+<footer>
+    <!--adding the footer-->
+    <div class="footercon">
+         <div class="footernav">
+               <ul>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="">Privacy Policy</a></li>
+                    <li><a href="">Terms of Service</a></li>
+                    <li><a href="">Returns & FAQ</a></li>
+               </ul>                   
+          </div>
+     </div>
+      <div class="footerbot">
+           <p>EMAIL: Customercare@Haya.com | PHONE: 0817 82901</p>
+          </div>
+</footer>
+<script>
+//java for increasing and decreasing quanitity
+    function increaseQuantity(spanId) {
+        const span = document.getElementById(spanId);
+        const currentQuantity = parseInt(span.innerText, 10);
+        span.innerText = currentQuantity + 1;
+        updateTotalPrice();
+    }
+
+    function decreaseQuantity(spanId) {
+        const span = document.getElementById(spanId);
+        const currentQuantity = parseInt(span.innerText, 10);
+        if (currentQuantity > 1) {
+            span.innerText = currentQuantity - 1;
+            updateTotalPrice();
+        }
+    }
+
+    function removeProduct(productId) {
+        const product = document.getElementById(productId);
+        product.remove();
+        updateTotalPrice();
+    }
+
+    function updateTotalPrice() {
+    const quantities = document.querySelectorAll('[id^="quantity"]');
+    const prices = [7000, 7000, 7000]; // the prices of our products
+    let totalPrice = 0;
+
+    quantities.forEach((quantity, index) => {
+        totalPrice += parseInt(quantity.innerText, 10) * prices[index];
+    });
+
+    document.getElementById('total-price').innerText = `Total Price: Rs. ${totalPrice.toFixed(2)}`;
+}
+    // update of total price
+    updateTotalPrice();
+</script>
+
+</html>
