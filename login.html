@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="er"> <!--indicates that primary language of the code is english-->
+<head>
+    <meta charset="UTF-8"> <!-- character encoding-->
+    <title>HAYA</title>  
+    <link rel="stylesheet" href="css/loginpage.css">  <!-- linking css file and fonts from google-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mirza">
+</head>
+<body>
+    <div class="full-page">
+        <header>
+            <img src="images\IMG_6891.jpg">   <!--adding the logo-->
+            <ul class="navmenu">
+                <li><a href="html/homepage.html">Home</a></li>
+                <li><a href="html/functionality.html">Products</a></li>
+                <li><a href="html/payment.html">Checkout</a></li>    <!--making the navigation bar in the header-->
+                <li><a href="html/categories.html">Categories</a></li>
+            </ul>
+        </header>
+        <br><br><br><br><br><br><br> <!--line breaks to add space between the header and form-->
+        <div id='login-form' class='login-page' style='display: block;'>
+            <div class="form-box">
+                <div class='button-box'>
+                    <div id='butn'></div> <!--making the buttons for login or register-->
+                    <button type='button' onclick='login()' class='toggle-btn'> Log in</button>
+                    <button type='button' onclick='register()' class='toggle-btn'> Register</button>
+                </div>
+                <form id='login' class='input-group-login' action="html/homepage.html" method="GET">
+                    <!--creating a form for login-->
+                    <input type='text' class='input-field' placeholder='Email id' required>
+                    <input type='password' class='input-field' placeholder='Enter password' required>
+                    <input type='checkbox' class='check-box'><span>Remember Password</span>
+                    <button type="submit" class='submit-butn'>Log in</button>
+                </form>
+                <!--creating a form for register-->
+                <form id='register' class='input-group-register' action="html/homepage.html" method="GET">
+                    <input type='text' class='input-field' placeholder='First Name' required>
+                    <input type='text' class='input-field' placeholder='Last Name' required>
+                    <input type='email' class='input-field' placeholder='Email id' required>
+                    <input type='tel' class='input-field' placeholder='Contact Number' required>
+                    <input type='text' class='input-field' placeholder='Address' required>
+                    <input type='checkbox' class='check-box'><span>I agree to terms and conditions</span>
+                    <button type='submit' class='submit-butn'>Register</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--writing a javascript code for the login and register forms to slide-->
+    <script>
+        var x = document.getElementById('login');
+        var y = document.getElementById('register');
+        var z = document.getElementById('butn');
+
+        function register() { <!--function to move the login form so that the user can see the register form-->
+            x.style.left = '-400px';
+            y.style.left = '50px';
+            z.style.left = '110px';  
+        }
+        function login() { <!--function to move the register form so that the user can see the login form-->
+            x.style.left = '50px';
+            y.style.left = '450px';
+            z.style.left = '0px';  
+        }
+    </script>
+</body>
+</html>
